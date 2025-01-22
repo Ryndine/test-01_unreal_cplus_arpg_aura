@@ -18,4 +18,7 @@ public:
 	// override the EnemyInferface highlights.
 	virtual void HighlightActor() override;
 	virtual void UnHighlightActor() override;
+
+	UPROPERTY(BlueprintReadOnly)
+	bool bHighlighted = false;
 };
