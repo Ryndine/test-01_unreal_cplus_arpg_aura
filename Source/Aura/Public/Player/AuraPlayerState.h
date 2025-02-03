@@ -7,6 +7,7 @@
 #include "AbilitySystem/AuraAbilitySystemComponent.h"
 #include "AbilitySystem/AuraAttributeSet.h"
 #include "GameFramework/PlayerState.h"
+#include "WorldPartition/Cook/WorldPartitionCookPackage.h"
 #include "AuraPlayerState.generated.h"
 
 class UAbilitySystemComponent;
@@ -25,6 +26,8 @@ public:
 	virtual void GetLifetimeReplicatedProps(TArray<class FLifetimeProperty>& OutLifetimeProps) const override;
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
+
+	FORCEINLINE GetPlayerLevel() const { return Level; }
 	
 protected:
 	UPROPERTY(VisibleAnywhere)
