@@ -27,7 +27,7 @@ public:
 	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const override;
 	UAttributeSet* GetAttributeSet() const { return AttributeSet; }
 
-	FORCEINLINE GetPlayerLevel() const { return Level; }
+	FORCEINLINE int32 GetPlayerLevel() const { return Level; }
 	
 protected:
 	UPROPERTY(VisibleAnywhere)
